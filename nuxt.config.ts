@@ -45,8 +45,13 @@ export default defineNuxtConfig({
 
   components: ['~/components'],
 
-  css: ['~/assets/css/global.css'],
-
+  css: ['~/assets/css/global.css', '~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   image: {
     dir: 'assets/images',
   },
