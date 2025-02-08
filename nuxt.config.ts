@@ -1,7 +1,7 @@
+import tailwindcss from '@tailwindcss/vite'
 import svgLoader from 'vite-svg-loader'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 export default defineNuxtConfig({
   app: {
     head: {
@@ -41,23 +41,7 @@ export default defineNuxtConfig({
     },
   },
 
-  buildModules: ['@nuxtjs/google-fonts', '@nuxt/image-edge'],
-
-  components: ['~/components'],
-
-  css: ['~/assets/css/global.css', '~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-  image: {
-    dir: 'assets/images',
-  },
-
   modules: [
-    'nuxt-windicss',
     [
       '@nuxtjs/google-fonts',
       {
@@ -66,31 +50,24 @@ export default defineNuxtConfig({
         },
       },
     ],
-    '@nuxt/image-edge',
   ],
 
   nitro: {
     compressPublicAssets: { brotli: true },
   },
 
-  target: 'static',
+  postcss: {
+    plugins: {
+      autoprefixer: {},
+    },
+  },
 
   vite: {
-    plugins: [svgLoader()],
+    plugins: [tailwindcss(), svgLoader()],
     optimizeDeps: {
       include: ['fast-deep-equal'],
     },
   },
 
-  windicss: {
-    analyze: {
-      analysis: {
-        interpretUtilities: false,
-      },
-      server: {
-        port: 3003,
-        open: false,
-      },
-    },
-  },
+  compatibilityDate: '2025-02-08',
 })
