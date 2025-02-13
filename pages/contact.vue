@@ -1,9 +1,11 @@
 <template>
   <div class="bg-beige-bg flex flex-col justify-between">
-    <h1 class="font-eiko uppercase text-8xl m-12 text-grey-900">
+    <h1
+      class="font-eiko uppercase text-3xl sm:text-5xl lg:text-7xl m-8 md:m-12 text-grey-900"
+    >
       connect with me
     </h1>
-    <div class="w-full uppercase p-8">
+    <div class="w-full uppercase p-4 md:p-8">
       <form
         v-if="!showSuccessMessage"
         class="flex flex-col w-full"
@@ -14,7 +16,7 @@
         @submit.prevent="handleSubmit"
       >
         <input name="form-name" type="hidden" value="contact" />
-        <div class="relative w-full mb-10 text-3xl">
+        <div class="relative w-full mb-10 text-xl md:text-3xl">
           <input
             type="text"
             name="name"
@@ -24,7 +26,7 @@
           />
           <label for="name" class="absolute duration-300 top-3">name</label>
         </div>
-        <div class="relative w-full mb-10 text-3xl">
+        <div class="relative w-full mb-10 text-xl md:text-3xl">
           <input
             type="email"
             name="email"
@@ -32,21 +34,23 @@
             placeholder=""
             class="pt-3 pb-2 pl-3 block w-full px-0 mt-0 border-0 border-b-1 appearance-none focus:outline-none focus:ring-0 focus:border-black border-beige-100"
           />
-          <label for="email" class="absolute duration-300 top-3 text-3xl">
-            email
-          </label>
+          <label for="email" class="absolute duration-300 top-3">email</label>
         </div>
-        <div class="relative w-full mb-10 text-3xl">
+        <div class="relative w-full mb-10 text-xl md:text-3xl">
           <input
             type="text"
-            name="name"
+            name="message"
             required
             placeholder=""
             class="pt-3 pb-2 pl-3 block w-full px-0 mt-0 border-0 border-b-1 appearance-none focus:outline-none focus:ring-0 focus:border-black border-beige-100"
           />
-          <label for="name" class="absolute duration-300 top-3">what?</label>
+          <label for="message" class="absolute duration-300 top-3">
+            message
+          </label>
         </div>
-        <div class="flex mt-12 justify-between items-center">
+        <div
+          class="flex flex-col sm:flex-row md:mt-12 justify-between items-start sm:items-center"
+        >
           <label
             class="flex items-baseline w-[350px] pl-8 relative hover:opacity-100! text-grey-900"
           >
@@ -66,10 +70,12 @@
             </span>
           </label>
           <button class="flex items-center cursor-pointer">
-            <span class="text-3xl text-grey-900 font-montreal-bold uppercase">
+            <span
+              class="text-xl md:text-3xl text-grey-900 font-montreal-bold uppercase"
+            >
               send
             </span>
-            <ArrowRight />
+            <ArrowRight class="w-24 h-24" />
           </button>
         </div>
       </form>

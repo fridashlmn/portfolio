@@ -5,7 +5,7 @@
   >
     <div
       v-if="isMenuOpen"
-      class="font-montreal-bold uppercase w-full h-full text-beige-100 flex flex-col items-center justify-between pb-8 pl-8 pt-32 pr-32"
+      class="font-montreal-bold uppercase w-full h-full text-beige-100 flex flex-col items-center justify-between pb-8 pl-8 pt-32 pr-9 lg:pr-32"
     >
       <div
         class="w-full duration-500 transition-all delay-300"
@@ -15,13 +15,13 @@
           <NuxtLink
             id="contact"
             to="/contact"
-            class="text-9xl pb-3 transition"
+            class="text-5xl sm:text-7xl lg:text-9xl pb-3 mt-8 lg:mt-0 transition"
             @mouseover="mouseOver('contact')"
             @mouseleave="mouseLeave"
           >
             Contact
           </NuxtLink>
-          <div class="font-montreal-light">
+          <div class="font-montreal-light text-xs sm:text-base">
             <a
               id="email"
               href="mailto:fridashlmn@gmail.com"
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div
-        class="flex w-full justify-between transition-all delay-400"
+        class="flex flex-col sm:flex-row w-full justify-between transition-all delay-400"
         :class="
           isMenuOpen ? ' translate-y-0 opacity-100' : 'opacity-0 translate-y-5'
         "
@@ -66,7 +66,7 @@
           <NuxtLink
             id="portfolio"
             to="/portfolio"
-            class="text-9xl"
+            class="text-5xl sm:text-7xl lg:text-9xl"
             @mouseover="mouseOver('portfolio')"
             @mouseleave="mouseLeave"
           >
@@ -75,7 +75,7 @@
           <NuxtLink
             id="about"
             to="/about"
-            class="text-9xl pb-3"
+            class="text-5xl sm:text-7xl lg:text-9xl pb-3"
             @mouseover="mouseOver('about')"
             @mouseleave="mouseLeave"
           >
@@ -91,7 +91,9 @@
             impressum
           </NuxtLink>
         </div>
-        <div class="flex flex-col justify-end mb-12 text-3xl text-right">
+        <div
+          class="flex flex-col justify-end mb-12 text-xl sm:text-2xl lg:text-3xl text-right"
+        >
           <NuxtLink
             id="gallery"
             to="/gallery"

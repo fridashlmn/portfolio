@@ -11,13 +11,13 @@
     <div class="flex">
       <NuxtLink
         to="/"
-        class="absolute top-[1%] left-[6%] font-montreal-bold text-3xl z-4 text-beige-100 mix-blend-difference"
+        class="absolute top-[1%] left-[3%] font-montreal-bold text-xl sm:text-2xl lg:text-3xl z-4 text-beige-100 mix-blend-difference"
         @click="isMenuOpen = false"
       >
         fridashlmn
       </NuxtLink>
       <div
-        class="mix-blend-difference absolute uppercase h-14 w-14 top-[6%] right-[4%] z-4 font-montreal-bold text-3xl rotate-[90deg]"
+        class="mix-blend-difference absolute uppercase h-14 w-14 top-[6%] right-[4%] z-4 font-montreal-bold text-xl sm:text-2xl lg:text-3xl rotate-[90deg]"
         @click="toggleMenu"
       >
         <NuxtLink
