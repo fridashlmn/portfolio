@@ -41,6 +41,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['~/assets/css/main.css'],
+
   modules: [
     [
       '@nuxtjs/google-fonts',

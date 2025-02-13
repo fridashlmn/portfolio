@@ -1,1 +1,118 @@
 @import 'tailwindcss';
+@font-face {
+  font-family: 'NeueMontrealLight';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/NeueMontreal-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NeueMontrealBold';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/NeueMontreal-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'EikoMedium';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/PPEiko-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NeueWorldRegular';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/PPNeueWorld-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NeueWorldCR';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/PPNeueWorld-CondensedRegular.ttf') format('truetype');
+}
+
+@theme {
+  --font-montreal-light: 'NeueMontrealLight', 'sans-serif';
+  --font-montreal-bold: 'NeueMontrealBold', 'sans-serif';
+  --font-eiko: 'EikoMedium', 'serif';
+  --font-world-reg: 'NeueWorldRegular', 'serif';
+  --font-world-con-reg: 'NeueWorldCR', 'serif';
+
+  --color-grey-900: #101010;
+  --color-grey-200: #f1f1f1;
+  --color-grey-100: #fafafa;
+  --color-beige-100: #f8f4f0;
+  --color-beige-bg: rgba(248, 244, 240, 0.5);
+  --color-blue: #050d5b;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-montreal-light);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+label {
+  font-family: var(--font-montreal-bold), sans-serif;
+  color: var(--color-grey-900);
+  opacity: 0.5;
+}
+
+input,
+textarea {
+  font-family: var(--font-montreal-bold), sans-serif;
+}
+
+input:hover ~ label,
+label:has(> .checkboxInput:checked) {
+  opacity: 1;
+}
+
+/*floating label*/
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label,
+select:focus ~ label,
+select:not([value='']):valid ~ label {
+  --tw-translate-x: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-scale-x: 0.75;
+  --tw-scale-y: 0.75;
+  --tw-translate-y: -2.5rem;
+  font-family: var(--font-montreal-light), sans-serif;
+  font-size: var(--text-2xl), sans-serif;
+}
+
+.checkboxBox {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  transition: 0.3s;
+  width: 15px;
+}
+
+.checkboxInput:checked ~ .checkboxBox {
+  background: var(--color-grey-900) no-repeat url(~/assets/icons/tick.svg) 50%;
+  border-color: var(--color-grey-900);
+}
