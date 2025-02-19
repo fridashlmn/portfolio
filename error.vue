@@ -1,16 +1,8 @@
 <template>
   <NuxtLayout>
-    <div class="max-w-screen min-h-screen w-screen">
-      <video
-        muted
-        autoplay
-        loop
-        src="~/assets/video/ocean.mp4"
-        id="fullVid"
-        class="object-cover absolute w-screen h-screen top-0 left-0 z-1"
-      />
+    <div class="bg-beige-100 max-w-screen min-h-screen w-screen">
       <main
-        class="flex flex-col items-center justify-center absolute w-screen h-screen top-0 left-0 z-2 text-beige-100"
+        class="flex flex-col items-center justify-center w-screen h-screen text-grey-900"
       >
         <h1 class="font-eikoh text-[20rem]">404</h1>
         <NuxtLink
