@@ -4,7 +4,7 @@
       muted
       autoplay
       loop
-      src="~/assets/video/blackWhiteSmoke.mp4"
+      src="~/assets/video/blueBlack.mp4"
       id="fullVid"
       class="object-cover absolute w-screen h-screen top-0 left-0 z-1"
     />
