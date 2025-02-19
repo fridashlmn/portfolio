@@ -44,6 +44,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   modules: [
+    'nuxt-security',
     [
       '@nuxtjs/google-fonts',
       {
@@ -61,6 +62,14 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       autoprefixer: {},
+    },
+  },
+
+  security: {
+    headers: {
+      crossOriginResourcePolicy: 'cross-origin',
+      contentSecurityPolicy: false,
+      xFrameOptions: false,
     },
   },
 

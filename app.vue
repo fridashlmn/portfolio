@@ -20,13 +20,13 @@
         class="mix-blend-difference absolute uppercase h-14 w-14 top-[6%] right-[4%] z-4 font-montreal-bold text-xl sm:text-2xl lg:text-3xl rotate-[90deg]"
         @click="toggleMenu"
       >
-        <NuxtLink
+        <button
           v-if="!isMenuOpen"
           class="text-beige-100 mix-blend-difference"
         >
           open
-        </NuxtLink>
-        <NuxtLink v-else class="text-beige-100">close</NuxtLink>
+        </button>
+        <button v-else class="text-beige-100">close</button>
       </div>
     </div>
     <SideBarMenu :isMenuOpen="isMenuOpen" @toggle-menu="toggleMenu" />
@@ -51,6 +51,26 @@
 </template>
 <script setup lang="ts">
 import SideBarMenu from '~/components/SideBarMenu.vue'
+
+useHead({
+  title: 'fridashlmn',
+  meta: [
+    {
+      name: 'description',
+      content: 'frontend developer portfolio',
+    },
+  ],
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+
+useSeoMeta({
+  title: 'fridashlmn',
+  ogTitle: 'fridashlmn',
+  description: 'frontend developer portfolio',
+  ogDescription: 'frontend developer portfolio',
+})
 
 const isMenuOpen = ref<boolean>(false)
 

@@ -21,6 +21,13 @@
   src: url('/fonts/PPEiko-Medium.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'EikoHeavy';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/fonts/PPEiko-Heavy.ttf') format('truetype');
+}
+@font-face {
   font-family: 'NeueWorldRegular';
   font-style: normal;
   font-weight: 200 700;
@@ -39,6 +46,7 @@
   --font-montreal-light: 'NeueMontrealLight', 'sans-serif';
   --font-montreal-bold: 'NeueMontrealBold', 'sans-serif';
   --font-eiko: 'EikoMedium', 'serif';
+  --font-eikoh: 'EikoHeavy', 'serif';
   --font-world-reg: 'NeueWorldRegular', 'serif';
   --font-world-con-reg: 'NeueWorldCR', 'serif';
 
@@ -61,6 +69,10 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
