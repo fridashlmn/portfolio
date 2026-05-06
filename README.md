@@ -1,1 +1,1 @@
-### [www.fridashlmn.com](https://fridashlmn.com/)
+## personal portfolio - [fridashlmn.com](https://fridashlmn.com/)
